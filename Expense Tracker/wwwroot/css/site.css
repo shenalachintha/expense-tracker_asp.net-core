@@ -18,5 +18,58 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: black;
+    color: white;
+}
+e-bigger {
+    font-size: x-large;
+}
+
+/* Ensure Syncfusion textboxes use dark theme colors */
+.e-control.e-textbox,
+.e-control-wrapper.e-input-group {
+    background-color: #23272f !important;
+    color: #fff !important;
+    border-color: #444 !important;
+
+}
+
+/* Custom square radio buttons with centered text */
+.e-btn-group input[type="radio"] {
+    display: none; /* Hide the default radio */
+}
+
+.e-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adds space between buttons */
+}
+
+.e-btn-group .e-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* Remove fixed width and height */
+    padding: 0.5rem 1.25rem; /* Adjust padding as needed */
+    margin-right: 0; /* Remove margin-right, gap handles spacing */
+    border: 2px solid #888;
+    border-radius: 6px; /* Slightly rounded corners, set to 0 for perfect square */
+    background: #23272f; /* Match dark theme */
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    user-select: none;
+}
+
+.e-btn-group input[type="radio"]:checked + .e-btn {
+    border-color: #007bff;
+    background: #007bff;
+    color: #fff;
+}
+
+.e-btn-group .e-btn:hover {
+    border-color: #0056b3;
+    background: #2a2f3a;
 }
